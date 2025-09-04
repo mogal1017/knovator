@@ -1,5 +1,4 @@
-// config/config.js
-require('dotenv').config(); // Load environment variables from .env file
+require('dotenv').config();
 
 module.exports = {
   development: {
@@ -8,7 +7,9 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     dialect: process.env.DB_DIALECT,
-    PORT: process.env.DB_PORT,
+    DB_PORT: process.env.DB_PORT,   // keep DB port
+    APP_PORT: process.env.APP_PORT, // new app port
     base_url: process.env.BASE_URL
   }
 };
+
